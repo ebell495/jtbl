@@ -1,0 +1,12 @@
+project: jtbl
+target: jtbl
+
+image: ghcr.io/ebell495/jtbl:latest
+duration: 300
+
+tests: 
+    - file:///no-tests
+
+cmds:
+    - cmd: fuzz/fuzz.py
+      libfuzzer: true
