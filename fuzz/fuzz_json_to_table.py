@@ -47,9 +47,10 @@ class suppress_stdout_stderr(object):
 
 @atheris.instrument_func
 def TestOneInput(data):
+    fdp = atheris.FuzzedDataProvider(data)
     # The CLI takes input from stdin, so we need to redirect stdin to a string
     try:
-        sys.stdin = io.StringIO(data.decode("utf-8"))
+        sys.stdin = io.StringIO(fdp.ConsumeUnicode(len(data)))
     except:
         return 
 

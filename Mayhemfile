@@ -1,6 +1,6 @@
 project: jtbl
-target: fuzz
+target: fuzz_json_to_table
 
 cmds:
-    - cmd: fuzz/fuzz.py
+    - cmd: fuzz/fuzz_json_to_table.py
       libfuzzer: true

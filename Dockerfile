@@ -3,4 +3,4 @@ RUN pip3 install atheris
 
 COPY . /jtbl
 WORKDIR /jtbl
-RUN python3 -m pip install . && chmod +x fuzz/fuzz.py
+RUN python3 -m pip install . && chmod +x fuzz/fuzz_json_to_table.py
